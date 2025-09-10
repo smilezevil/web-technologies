@@ -1,1 +1,1 @@
-hola, it`s really cool to work with git and github
+hola, i`m nastya (243 group the best!)
