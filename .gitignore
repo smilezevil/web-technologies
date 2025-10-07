@@ -1,0 +1,28 @@
+# System files
+.DS_Store
+Thumbs.db
+__MACOSX
+*:Zone.Identifier
+
+# IDE
+.idea/
+.vscode/
+
+# Build and dependencies
+node_modules/
+dist/
+logs/
+*.log
+
+# Archives
+*.zip
+*.rar
+
+# Temporary folders
+.Saved/
+_arc/
+ex_files/
+.publish/
+
+# Editor configs
+*.sublime-*
