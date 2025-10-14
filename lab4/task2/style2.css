@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+.position-center {
+    text-align: center;
+}
+
+.color {
+    color: #ff0000;
+    font-size: 32px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+.line {
+    border: none;
+    height: 6px;
+    width: 85%;
+    background-color: #008000;
+}
+
+#pcscript {
+    text-align: center;
+    color: #898989;
+    font-style: italic;
+}
