@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.30);
+}
+
+header{
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+}
+
+.wrapper{
+    width: 1140px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+}
+
+li{
+    margin: 15px;
+    float: left;
+}
+
+li a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    background: rgb(225, 112, 53);
+    border-radius: 10px;
+}
+
+.nav-logo{
+    float: left;
+}
+
+.navbar{
+    float: right;
+}
+
+.columns-container{
+    column-count: 3;
+    column-gap: 35px;
+    column-rule: 5px dashed #FF2A00;
+}
+
+main{
+    margin-top: 70px;
+    clear: both;
+}
+
+
+.columns-container > p:nth-child(1) img {
+    float: right;
+    margin: 10px 15px 10px 0;
+}
+
+.columns-container > p:nth-child(2) img {
+    float: left;
+    margin: 10px 15px 10px 5px;
+}
+
+.columns-container > p:nth-child(3) img {
+    float: right;
+    margin: 10px 0 10px 15px;
+    height: 150px;
+}

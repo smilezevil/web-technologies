@@ -1,0 +1,128 @@
+body{
+    margin: 0;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.30);
+}
+
+header{
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+}
+
+.wrapper{
+    width: 1140px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+}
+
+li{
+    margin: 15px;
+    float: left;
+}
+
+li a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    background: rgb(225, 112, 53);
+    border-radius: 10px;
+}
+
+.nav-logo{
+    float: left;
+}
+
+.navbar{
+    float: right;
+}
+
+main{
+    clear: both;
+}
+
+
+.gradient-container {
+    overflow: auto;
+    padding: 10px;
+}
+
+.gradient-card {
+    float: left;
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.gradient-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    z-index: 2;
+    position: relative;
+}
+
+.gradient-card h3 {
+    margin: 0;
+    padding-top: 5px;
+    z-index: 2;
+    position: relative;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.gradient-card p {
+    font-size: 14px;
+    text-align: justify;
+    z-index: 2;
+    position: relative;
+    text-shadow: 1px 1px 2px #000;
+    padding: 0 10px;
+}
+
+.gradient-1 {
+    background: linear-gradient(to bottom left, orange, blue, yellow, lime);
+}
+
+.gradient-2 {
+    background:
+            linear-gradient(45deg, green 17%, white 25%, transparent 25%, transparent 75%, orange 75%, blue 95%),
+            linear-gradient(45deg, yellow 17%, white 25%, transparent 25%, transparent 75%, purple 75%, orange 95%);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+}
+
+.gradient-3 {
+    background: repeating-linear-gradient(to right, green 0%, white 10%, blue 10%, yellow 20%);
+}
+
+.gradient-4 {
+    background:
+            linear-gradient(300deg, rgba(255, 208, 0, 1) 0%, rgba(255, 224, 86, 1) 34%, rgba(255, 255, 255, 0) 34%, rgba(255, 255, 255, 0) 100%),
+            linear-gradient(53deg, rgba(23, 227, 0, 1) 0%, rgba(50, 174, 87, 1) 25%, rgba(52, 170, 93, 0) 25%),
+            linear-gradient(145deg, rgba(255, 140, 0, 1) 0%, rgba(170, 125, 52, 0) 60%),
+            linear-gradient(225deg, rgba(0, 20, 171, 1) 0%, rgba(170, 125, 52, 0) 60%);
+}
+
+.gradient-5 {
+    background-blend-mode: multiply;
+    background:
+            linear-gradient(328deg, rgba(255, 0, 0, 0.5) 5%, rgba(255, 165, 0, 0.5) 10%, rgba(255, 255, 0, 0.5) 15%, rgba(0, 128, 0, 0.5) 20%, rgba(0, 0, 255, 0.5) 25%, rgba(75, 0, 130, 0.5) 30%, rgba(238, 130, 238, 0.5) 35%, rgba(255, 255, 255, 0) 45%),
+            linear-gradient(45deg, rgba(255, 0, 0, 0.5) 15%, rgba(255, 165, 0, 0.5) 20%, rgba(255, 255, 0, 0.5) 30%, rgba(0, 128, 0, 0.5) 40%, rgba(0, 0, 255, 0.5) 55%, rgba(75, 0, 130, 0.5) 50%, rgba(238, 130, 238, 0.5) 70%, rgba(255, 255, 255, 0) 45%),
+            linear-gradient(180deg, rgba(255, 0, 0, 0.5) 20%, rgba(255, 165, 0, 0.5) 30%, rgba(255, 255, 0, 0.5) 40%, rgba(0, 128, 0, 0.5) 50%, rgba(0, 0, 255, 0.5) 60%, rgba(75, 0, 130, 0.5) 70%, rgba(238, 130, 238, 0.5) 80%, rgba(255, 255, 255, 0) 45%);
+}

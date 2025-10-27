@@ -1,0 +1,163 @@
+body{
+    margin: 0;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.30);
+}
+
+header{
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+}
+
+.wrapper{
+    width: 1140px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+}
+
+li{
+    margin: 15px;
+    float: left;
+}
+
+li a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    background: rgb(225, 112, 53);
+    border-radius: 10px;
+}
+
+.nav-logo{
+    float: left;
+}
+
+.navbar{
+    float: right;
+}
+
+main{
+    margin-top: 70px;
+    clear: both;
+}
+
+.blocks-container {
+    padding-top: 10px;
+}
+
+.block {
+    float: left;
+    width: 300px;
+    min-height: 140px;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 20px;
+    font-size: 14px;
+}
+.block p {
+    margin: 0;
+}
+.block-1 {
+    border: 5px solid greenyellow;
+    padding: 10px;
+    border-radius:10%;
+}
+
+.block-2 {
+    border: 5px solid greenyellow;
+    padding: 10px;
+    border-radius: 50px 0;
+}
+
+.block-3 {
+    border: 5px solid greenyellow;
+    padding: 10px;
+    border-radius: 20% 50% ;
+}
+
+.block-4 {
+    border: 20px solid greenyellow;
+    border-top-color:green;
+    border-bottom-color: green;;
+    padding: 10px;
+    border-radius: 50px 50px ;
+}
+
+.block-5 {
+    border: 20px solid greenyellow;
+    border-left-color:green;
+    border-right-color: green;;
+    padding: 10px;
+    border-radius: 40% 10% ;
+}
+
+.block-6 {
+    border: 20px solid greenyellow;
+    border-left-color: green;
+    padding: 10px;
+    border-bottom-right-radius: 100% ;
+}
+
+.block-7 {
+    border-image-slice: 28 25 27 27;
+    border-image-width: 20px 20px 20px 20px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-source: url(../img/border_image.png);
+    border-style: solid;
+}
+
+.block-8 {
+    float: left;
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    border-image-slice: 13 13 13 13;
+    border-image-width: 15px 15px 15px 15px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: round;
+    border-image-source: url('https://mdn.github.io/css-examples/tools/border-image-generator/border-image-1.png');
+    border-style: solid;
+}
+
+.block-9 {
+    float: left;
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    border-image-slice: 27 27 27 27;
+    border-image-width: 20px 20px 20px 20px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: round round;
+    border-image-source: url('https://mdn.github.io/css-examples/tools/border-image-generator/border-image-1.png');
+    border-style: solid;
+}
+
+.block-11 {
+    border: 12px solid transparent;
+    border-image: url(../img/circle.png) 8 round;
+}
+
+.block-10 {
+    border-image-slice: 27 27 27 27;
+    border-image-width: 20px 20px 20px 20px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-source: url(../img/paint.png);
+}
+
+.block-12 {
+    border-image-slice: 27 34 27 18;
+    border-image-width: 20px 20px 20px 20px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-source: url(../img/long_round.png);
+}
