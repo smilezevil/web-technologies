@@ -47,7 +47,7 @@ li a{
 .columns-container{
     column-count: 3;
     column-gap: 35px;
-    column-rule: 5px dashed #FF2A00;
+    column-rule: 5px dotted red;
 }
 
 main{
