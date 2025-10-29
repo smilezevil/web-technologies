@@ -93,6 +93,7 @@ body {
     display: block;
     font-size: 12px;
     font-weight: bold;
+    color: #888;
 }
 
 .forecast-day .day-temp {
@@ -100,3 +101,4 @@ body {
     font-size: 16px;
     margin-top: 4px;
 }
+
