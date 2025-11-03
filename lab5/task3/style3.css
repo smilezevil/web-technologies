@@ -1,0 +1,119 @@
+body {
+    color: #000000;
+    padding: 5px 30px;
+    font-family: Arial, sans-serif;
+    background-image: radial-gradient(#a384d1, #c7b8ec, #ebe1fc);
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+h1 {
+    text-align: center;
+}
+#mainForm {
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+legend {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #9f3fa3;
+}
+
+fieldset {
+    border-radius: 30px;
+    border: 2px solid #000000;
+    margin-bottom: 10px;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 40px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0 10px;
+    padding: 10px 15px;
+    border: none;
+}
+
+.reset-btn {
+    background: #a65db1;
+}
+
+.submit-btn {
+    background: #743c84;
+}
+
+.about label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.programs-editing label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+#fullname,
+#password,
+#email,
+#phone,
+#birthdate {
+    font-weight: bold;
+    color: #737373;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: none;
+    background: #ffffff;
+    margin: 10px 15px;
+    display: block;
+}
+
+
+#level {
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: none;
+    background: #775abc;
+    display: block;
+    margin: 10px 0;
+}
+
+button {
+    color: #ffffff;
+    background: #c0ade8;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+button:hover {
+    opacity: 0.85;
+    transform: scale(1.03);
+    color: #000000;
+    background: #775abc;
+    transition: all 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #d067e1;
+    background-color: #fdf4ff;
+}

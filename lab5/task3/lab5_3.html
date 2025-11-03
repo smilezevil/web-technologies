@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Main Form</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+<h1>Fill out the form:</h1>
+<form id="mainForm" action="" method="get" tabindex="1">
+    <fieldset>
+        <legend>Personal data</legend>
+        <div class="form-input">
+            <label for="fullname" class="form-label">Login:</label>
+            <input id="fullname" name="fullname" type="text" placeholder="Your name" required tabindex="2"
+                   class="form-control"/>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input id="password" name="password" type="password" placeholder="Password" required
+                   pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[^A-Za-z0-9]).{6,}$" tabindex="3"/>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="email" placeholder="user@example.com" required autocomplete="off"
+                   pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" tabindex="4"/>
+        </div>
+        <div>
+            <label for="phone">Phone:</label>
+            <input id="phone" name="phone" type="tel" placeholder="+380989853936" required pattern="^\+?\d{9,15}$"
+                   tabindex="5"/>
+        </div>
+        <div>
+            <label for="birthdate">Date of birth:</label>
+            <input id="birthdate" name="birthdate" type="date" required tabindex="6"/>
+        </div>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Your skills</legend>
+        <div>
+            <p>Have you ever worked in design?</p>
+            <label><input type="radio" name="relocate" value="no" tabindex="11"/> No</label>
+            <label><input type="radio" name="relocate" value="maybe" tabindex="12"/> Maybe</label>
+            <label><input type="radio" name="relocate" value="yes" checked tabindex="13"/> Yes</label>
+        </div>
+        <div class="programs">
+            <p>Which of these programs do you know how to use?</p>
+            <label><input type="checkbox" name="Figma" value="Figma" tabindex="14" />Figma </label>
+            <label><input type="checkbox" name="Adobe Photoshop" value="Adobe Photoshop" tabindex="16" />Adobe Photoshop </label>
+            <label><input type="checkbox" name="Adobe Illustrator" value="Adobe Illustrator" tabindex="17" />Adobe Illustrator </label>
+            <input type="checkbox" name="other" value="other" tabindex="20" /> Other</label>
+        </div>
+
+        <div>
+            <label for="level">What is your English level?</label>
+            <select name="level" id="level" tabindex="21">
+                <option value="a1">A1 Beginner</option>
+                <option value="a2">A2 Elementary</option>
+                <option value="b1" selected>B1 Intermediate</option>
+                <option value="b2">B2 Upper-Intermediate</option>
+                <option value="c1">C1 Advanced</option>
+                <option value="c2">C2 Proficiency</option>
+            </select>
+        </div>
+
+    </fieldset>
+    <fieldset>
+        <legend>Your impressions</legend>
+        <label for="comment1">Comment:</label><br>
+        <textarea id="comment1" name="comment" rows="4" cols="50" placeholder="Description"></textarea>
+    </fieldset>
+    <fieldset>
+        <legend>Add file</legend>
+        <input type="file" name="files" accept="audio/*" multiple>
+    </fieldset>
+
+    <div class="button-container">
+        <button type="submit">Send</button>
+        <button type="reset">Clear</button>
+    </div>
+</form>
+</body>
+
+</html>
