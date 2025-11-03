@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Questionnaire</title>
+</head>
+<body align="center">
+
+<h1>Fill out the form:</h1>
+
+<form action="" method="get">
+
+    <fieldset>
+        <legend>Personal data</legend>
+
+        <label for="name1">Login:</label>
+        <input type="text" id="name1" name="name" placeholder="Your name" required><br><br>
+
+        <label for="password1">Password:</label>
+        <input type="password" id="password1" name="password"
+               placeholder="Password"
+               pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}"
+               title="Minimum 6 characters, 1 uppercase letter, 1 lowercase letter, 1 number"
+               required><br><br>
+
+        <label for="email1">Email:</label>
+        <input type="email" id="email1" name="email" placeholder="user@gmail.com" required><br><br>
+
+        <label for="phone1">Phone:</label>
+        <input type="tel" id="phone1" name="phone" placeholder="+380989853936" required><br><br>
+
+        <label for="birth1">Date of birth:</label>
+        <input type="date" id="birth1" name="birth" required><br><br>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Your skills</legend>
+        <div>
+            <p>Have you ever worked in design?</p>
+            <label><input type="radio" name="relocate" value="no" tabindex="11" /> No</label>
+            <label><input type="radio" name="relocate" value="maybe" tabindex="12" /> Maybe</label>
+            <label><input type="radio" name="relocate" value="yes" checked tabindex="13" /> Yes</label>
+        </div>
+
+        <div>
+            <p>Which of these programs do you know how to use?</p>
+            <label><input type="checkbox" name="Figma" value="Figma" tabindex="14" />Figma </label>
+            <label><input type="checkbox" name="Adobe Photoshop" value="Adobe Photoshop" tabindex="16" />Adobe Photoshop </label>
+            <label><input type="checkbox" name="Adobe Illustrator" value="Adobe Illustrator" tabindex="17" />Adobe Illustrator </label>
+            <input type="checkbox" name="other_prog" value="other_prog" tabindex="20" /> Other</label>
+        </div>
+        <br>
+
+        <div>
+            <label for="level">What is your English level?</label>
+            <br>
+            <br>
+            <select name="level" id="level" tabindex="21">
+                <option value="a1">A1 Beginner</option>
+                <option value="a2">A2 Elementary</option>
+                <option value="b1" selected>B1 Intermediate</option>
+                <option value="b2">B2 Upper-Intermediate</option>
+                <option value="c1">C1 Advanced</option>
+                <option value="c2">C2 Proficiency</option>
+            </select>
+        </div>
+        <br>
+
+    </fieldset>
+    <fieldset>
+            <legend>Your impressions</legend>
+            <label for="comment1">Сomment</label><br>
+            <textarea id="comment1" name="comment" rows="4" cols="50" placeholder="Description"></textarea>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Add file</legend>
+            <input type="file" name="files" accept="audio/*" multiple>
+        </fieldset>
+
+        <br><br>
+
+        <button type="submit">Send</button>
+        <button type="reset">Clear</button>
+</form>
+
+<hr><br>
+
+
+</body>
+<a href="../index.html">Повернутись на головну</a>
+</html>
