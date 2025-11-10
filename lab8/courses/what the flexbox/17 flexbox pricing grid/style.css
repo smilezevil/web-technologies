@@ -1,0 +1,110 @@
+/* General Setup */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+    color: #000;
+    text-align: left;
+}
+
+/* Grid Container */
+.pricing-grid {
+    max-width: 750px;
+    margin: 0 auto;
+    /*border: 3px solid red;*/
+    display: flex;
+    align-items: center;
+}
+
+/* Each Plan Card */
+.plan {
+    background: rgba(255, 255, 255, 0.2);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+
+}
+
+.plan > * {
+    flex: 1 1 100%;
+    /*flex-basis: 100%;*/
+}
+
+.plan .cta {
+    align-items: flex-end;
+}
+
+/* Headings */
+.plan h2 {
+    text-transform: uppercase;
+    margin-top: 0;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+/* Description paragraph */
+.plan p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+/* Features list */
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.features li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 5px 0;
+    font-size: 15px;
+}
+
+/* Price */
+.price {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 15px 0;
+    text-transform: lowercase;
+}
+
+/* Call-to-action button */
+.cta {
+    display: inline-block;
+    text-decoration: none;
+    background: #ffeb3b;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.cta:hover {
+    background: #ffe100;
+}
+
+/* Responsive Layout */
+@media (max-width: 700px) {
+    .pricing-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan {
+        width: 80%;
+    }
+}

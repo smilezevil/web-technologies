@@ -1,0 +1,148 @@
+/* base reset */
+* {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* full-bleed video background */
+.dog {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fills screen nicely */
+    z-index: -1; /* behind form */
+    filter: blur(0px); /* set to 2-3px if you want blur */
+}
+
+/* top bar container */
+.cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* the form bar */
+.flex-form > * {
+    border: 0;
+    padding: 10px;
+    background: whitesmoke;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 0;
+    outline: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-appearance: none;
+}
+
+/* inputs look like compact segments */
+.flex-form input[type="search"] {
+    flex: 1 1 360px;
+    min-width: 220px;
+    padding: 12px 14px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.flex-form label {
+    padding: 0 12px;
+    line-height: 44px;
+    background: #f1f1f1;
+    border-left: 1px solid #e3e3e3;
+    border-right: 1px solid #e3e3e3;
+    white-space: nowrap;
+    font-weight: 600;
+    color: #333;
+}
+
+.flex-form {
+    display: flex;
+    border: 20px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+
+}
+
+input[type="search"] {
+    flex-basis: 500px;
+}
+
+.flex-form input[type="date"],
+.flex-form select {
+    height: 44px;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background: #fff;
+    border-right: 1px solid #eee;
+}
+
+.flex-form select {
+    min-width: 120px;
+}
+
+/* red Search button */
+.flex-form input[type="submit"] {
+    height: 44px;
+    padding: 0 18px;
+    border: none;
+    cursor: pointer;
+    background: #e74c3c;
+    color: #fff;
+    font-weight: 700;
+    transition: opacity .2s ease, transform .02s ease;
+}
+
+.flex-form input[type="submit"]:hover {
+    opacity: .9;
+}
+
+.flex-form input[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+/* responsive: stack rows on small screens */
+@media (max-width: 840px) {
+    .flex-form {
+        flex-wrap: wrap;
+    }
+
+    .flex-form label {
+        border-right: none;
+    }
+
+    .flex-form input[type="search"] {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 520px) {
+    .flex-form {
+        gap: 8px;
+        border-radius: 8px;
+        padding: 8px;
+    }
+
+    .flex-form label {
+        line-height: 36px;
+    }
+
+    .flex-form input[type="date"],
+    .flex-form select,
+    .flex-form input[type="submit"] {
+        height: 36px;
+    }
+}

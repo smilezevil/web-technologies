@@ -1,0 +1,108 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+    color: white;
+}
+
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px 5px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+a:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+
+.slider-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+
+.slider-nav li {
+    flex: 2;
+    text-align: center;
+    display: flex;
+}
+
+
+.slider-nav .arrow {
+    flex: 1;
+}
+
+.arrow a {
+    font-size: 30px;
+}
+
+.slider-nav a {
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.slider-nav span {
+    display: block;
+    width: 100%;
+
+}
+
+
+.slider-nav .arrow {
+    flex: 0 0 50px;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.slider-nav .arrow a {
+    padding: 20px 0;
+}
+
+
+@media all and (max-width: 700px) {
+    .slider-nav ul {
+        flex-wrap: wrap;
+    }
+
+    .slider-nav li {
+        flex: 1 1 50%;
+    }
+
+    .slider-nav .arrow {
+        flex: 1 1 100%;
+    }
+}
