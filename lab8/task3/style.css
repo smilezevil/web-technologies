@@ -106,19 +106,18 @@ h2 span.sub-text {
 
 .forecast-list {
     padding-left: 0;
-    margin: 0;
 }
 
 .forecast-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid #646464;
+    border-top: 1px solid #bfbfbf;
     padding: 0 5px;
 }
 
 .forecast-item:last-child {
-    border-bottom: 1px solid #646464;
+    border-bottom: 1px solid #bfbfbf;
 }
 
 .forecast-item span {
