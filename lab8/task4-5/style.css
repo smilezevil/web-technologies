@@ -393,7 +393,7 @@ nav {
     margin-left: 10px;
 }
 .filter-button {
-    background-color: #ff5a5f;
+    background-color: var(--select-color);
     border: none;
     color: white;
     padding: 12px 20px;
@@ -402,7 +402,7 @@ nav {
     transition: background-color 0.3s;
 }
 .filter-button:hover {
-    background-color: #e04e52;
+    background-color: #c0392b;
 }
 .gallery {
     display: flex;
@@ -653,7 +653,7 @@ nav {
     background-color: #5dade2;
 }
 
-.dribbble {
+.dribble {
     background-color: #e85787;
 }
 
