@@ -28,34 +28,32 @@ img {
     grid-column: span 3;
 }
 
-/* Медіа-запит для екранів шириною 768px і менше (планшети) */
 @media (max-width: 768px) {
     .container {
-        grid-template-columns: repeat(4, 1fr); /* 4 колонки для планшетів */
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .center {
-        grid-row: span 2; /* Зменшуємо рядки для центру */
-        grid-column: span 2; /* Зменшуємо колонки для центру */
+        grid-row: span 2;
+        grid-column: span 2;
     }
 
     .column {
-        grid-row: span 1; /* Знімаємо span для колонок */
+        grid-row: span 1;
     }
 }
 
-/* Медіа-запит для екранів шириною 576px і менше (мобільні) */
 @media (max-width: 576px) {
     .container {
-        grid-template-columns: repeat(2, 1fr); /* 2 колонки для мобільних */
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .center {
-        grid-row: span 1; /* Знімаємо span для центру */
+        grid-row: span 1;
         grid-column: span 1;
     }
 
     .column {
-        grid-row: span 1; /* Знімаємо span для колонок */
+        grid-row: span 1;
     }
 }
