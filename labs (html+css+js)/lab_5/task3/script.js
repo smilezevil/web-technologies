@@ -13,7 +13,7 @@ const dayCells   = document.querySelectorAll('.day-cell');
 const bdayInput  = document.getElementById('bday-input');
 const bdayResult = document.getElementById('bday-result');
 
-//бере поточний час через new Date(), отримує цифри, padStart(2, '0') додає нуль спереду якщо однозначне число.
+//годинник
 function updateTime() {
     const now = new Date();
     hour.textContent   = now.getHours().toString().padStart(2, '0') + ':';
@@ -23,7 +23,6 @@ function updateTime() {
 
 let visible = true;
 
-//(мигання секунд) — кожні 500мс перемикає visible між true/false і ховає/показує секунди через style.visibility.
 setInterval(() => {
     visible = !visible;
     second.style.visibility = visible ? 'visible' : 'hidden';
@@ -32,10 +31,9 @@ setInterval(() => {
 
 updateTime();
 
-
 let timerInterval = null;
 
-//(таймер) — через prompt отримує рядок год хв сек, split(':') ділить на частини, parseInt перетворює в числа.
+//таймер
 startBtn.addEventListener('click', () => {
     const input = prompt('Введіть час у форматі HH:MM:SS', '00:00:10');
     if (!input) return;
@@ -76,10 +74,10 @@ startBtn.addEventListener('click', () => {
     }, 1000);
 });
 
-//getDay() дізнається з якого дня тижня починається місяць. getDate() дізнається скільки днів у місяці. Потім перебирає всі клітинки і або ставить число або залишає порожньою.
+//календар
 function renderCalendar(year, month) {
     const firstDay    = new Date(year, month, 1).getDay();
-    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const daysInMonth = new Date(year, month + 1, 0).getDate(); //скільки днів у місяці
     const startIndex  = firstDay === 0 ? 6 : firstDay - 1;
 
     dayCells.forEach((cell, i) => {
@@ -93,7 +91,7 @@ function renderCalendar(year, month) {
     });
 }
 
-//при завантаженні сторінки ставить у input поточний місяць і рендерить його.
+//при завантаженні сторінки ставить у input поточний місяць і рендерить його
 function initCalendar() {
     const today = new Date();
     const y = today.getFullYear();
@@ -111,7 +109,7 @@ monthInput.addEventListener('change', () => {
 
 initCalendar();
 
-//(день народження) — кожну секунду якщо обрана дата: встановлює рік народження на поточний, якщо вже минув — на наступний. Рахує різницю місяців, днів, годин, хвилин, секунд і виводить у текст.
+//відлік до дня народження
 setInterval(() => {
     if (!bdayInput.value) return;
 
@@ -140,3 +138,4 @@ setInterval(() => {
             `${minDiff.toString().padStart(2, '0')} хвилин, ` +
             `${secDiff.toString().padStart(2, '0')} секунд`;
 }, 1000);
+
