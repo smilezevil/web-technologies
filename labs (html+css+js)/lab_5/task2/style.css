@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+h2 {
+    margin-bottom: 20px;
+}
+
 .traffic-light {
     display: flex;
     justify-content: start;
