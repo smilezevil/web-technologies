@@ -18,22 +18,24 @@ function minmaxArr(arr){
 console.log(minmaxArr([3,6,1,-10,0,2]))
 
 let player1 = {
-    name: "smilezevil",
-    regDate: 30,
-    rank: 20,
-    itemsCount: 100
+    username: "smilezevil",
+    level: 30,
+    power: 20,
 };
 
 let player2 = {
-    name: "moonbaloon",
-    regDate: 25,
-    rank: 15,
-    itemsCount: 104
+    username: "moonbaloon",
+    level: 25,
+    power: 15,
 }
 
 function playerCompare(obj1, obj2) {
-    if (obj1.rank >= obj2.rank) {
-        return `Player ${obj1.name} stronger than ${obj2.name} by rank`;
+    if (obj1.power > obj2.power) {
+        return `Player ${obj1.username} stronger than ${obj2.username} by power`;
+    } else if (obj1.power < obj2.power) {
+        return `Player ${obj2.username} stronger than ${obj1.username} by power`;
+    } else {
+        return `Player ${obj1.username} and ${obj2.username} have the same power`;
     }
 }
 
