@@ -1,12 +1,9 @@
-//головне сховище товарів. Ключ — id, значення — об'єкт {name, price, count}.
 let products = new Map();
 
-//додає новий товар у Map.
 function addProduct(id, name, price, count) {
     products.set(id, { name, price, count });
 }
 
-//products.has(id) перевіряє чи існує, products.delete(id) видаляє.
 deleteProduct = (id) => {
     if (products.has(id)) {
         products.delete(id);
@@ -15,7 +12,6 @@ deleteProduct = (id) => {
     }
 }
 
-//products.get(id) отримує старий об'єкт, ...product копіює всі поля, замінює price і count, зберігає назад. Також викликає addHistory.
 function updateProduct(id, price, count) {
     if (products.has(id)) {
         const product = products.get(id);
@@ -26,7 +22,6 @@ function updateProduct(id, price, count) {
     }
 }
 
-//for...of перебирає всі записи Map, порівнює назву. Повертає знайдений товар або null.
 function findByName(name) {
     for (let [id, product] of products) {
         if (product.name === name) {
@@ -37,7 +32,6 @@ function findByName(name) {
     return null;
 }
 
-//зменшує count на 1 після замовлення. Повертає true якщо товар ще є на складі.
 function isBought(id) {
     if (products.has(id)) {
         const product = products.get(id);
@@ -50,10 +44,8 @@ function isBought(id) {
     }
 }
 
-//зберігає унікальні замовлені товари. Set не допускає дублікатів.
 let orderedProducts = new Set();
 
-//те саме що isBought але ще додає товар у orderedProducts через Set.add().
 function isBoughtOneMore(id) {
     if (!products.has(id)) {
         console.log(`Product with id ${id} does not exist.`);
@@ -69,10 +61,7 @@ function isBoughtOneMore(id) {
     return product.count > 0;
 }
 
-//зберігає історію змін. Ключ — сам об'єкт товару (не id!). WeakMap використовується тут тому що не заважає збирачу сміття видалити об'єкт якщо він більше не використовується.
 let history = new WeakMap();
-
-//якщо для цього товару ще немає записів — створює порожній масив. Потім додає дату зміни через push.
 function addHistory(product, date) {
     if (!history.has(product)) {
         history.set(product, []);
