@@ -1,13 +1,13 @@
 const red     = document.querySelector('.red');
 const yellow  = document.querySelector('.yellow');
 const green   = document.querySelector('.green');
+
 const redBtn  = document.getElementById('change-red');
 const yellowBtn = document.getElementById('change-yellow');
 const greenBtn  = document.getElementById('change-green');
 const nextBtn   = document.getElementById('next-btn');
 const text      = document.getElementById('output');
 
-//тривалість кожного кольору в мілісекундах.
 let redDuration    = 5000;
 let yellowDuration = 3000;
 let greenDuration  = 7000;
@@ -15,14 +15,12 @@ let greenDuration  = 7000;
 let currentState = 'red';
 let cycleTimeout = null;
 
-//знімає клас active з усіх трьох картинок → всі ховаються.
 function hideAll() {
     red.classList.remove('active');
     yellow.classList.remove('active');
     green.classList.remove('active');
 }
 
-//ховає все, додає active до потрібної картинки, оновлює текст і колір підпису, записує поточний стан у currentState.
 function showState(state, color, label) {
     hideAll();
     document.querySelector(`.${state}`).classList.add('active');
@@ -31,7 +29,6 @@ function showState(state, color, label) {
     currentState = state;
 }
 
-//мигає жовтим 3 рази. Всередині рекурсивна функція blink() — показує жовтий на 300мс, ховає на 300мс.
 function blinkYellow(callback) {
     let count = 0;
 
@@ -54,7 +51,6 @@ function blinkYellow(callback) {
     blink();
 }
 
-//основний цикл світлофора через вкладені setTimeout: червоний → жовтий → зелений → blinkYellow → знову startCycle.
 function startCycle() {
     clearTimeout(cycleTimeout);
 
@@ -75,7 +71,6 @@ function startCycle() {
     }, redDuration);
 }
 
-//Кнопки зміни тривалості — через prompt отримує число в секундах, * 1000 щоб перевести в мілісекунди, перезапускає startCycle.
 redBtn.addEventListener('click', () => {
     const value = prompt('Введіть тривалість червоного (в секундах):', redDuration / 1000);
     if (value === null) return;
@@ -103,7 +98,6 @@ greenBtn.addEventListener('click', () => {
     startCycle();
 });
 
-//clearTimeout скасовує поточний таймер, потім дивиться на currentState і переключає на наступний стан вручну пропускаючи блимання.
 nextBtn.addEventListener('click', () => {
     clearTimeout(cycleTimeout);
 
@@ -112,7 +106,7 @@ nextBtn.addEventListener('click', () => {
         cycleTimeout = setTimeout(() => {
             showState('green', 'green', 'Зелений');
             cycleTimeout = setTimeout(() => {
-                startCycle(); // одразу починаємо цикл (червоний)
+                startCycle();
             }, greenDuration);
         }, yellowDuration);
 
