@@ -1,4 +1,3 @@
-//task1
 function sumFirst50NaturalNumbers() {
     let i = 1;
     let sum = 0;
@@ -13,7 +12,7 @@ function sumFirst50NaturalNumbers() {
 
 console.log("Завдання 1: сума перших 50 натуральних чисел =", sumFirst50NaturalNumbers());
 
-//task2
+
 function factorialOfNumber(n) {
     let result = 1;
 
@@ -26,7 +25,7 @@ function factorialOfNumber(n) {
 
 console.log("Завдання 2: обчислення факторіалу числа 5 =", factorialOfNumber(5));
 
-//task3
+
 function getMonthName(month) {
     switch (month) {
         case 1: return "January";
@@ -47,7 +46,7 @@ function getMonthName(month) {
 
 console.log("Завдання 3: назва місяця під номером 10 -", getMonthName(10));
 
-//task4
+
 function sumEvenNumbers(arr) {
     let sum = 0;
 
@@ -62,7 +61,7 @@ function sumEvenNumbers(arr) {
 
 console.log("Завдання 4: сума всіх парних чисел масиву [1, 2, 3, 53, 52, 13, 8] =", sumEvenNumbers([1, 2, 3, 53, 52, 13, 8]));
 
-//task5
+
 const countOfVowels = (word) => {
     const vowels = ['a', 'e', 'i', 'o', 'u'];
     let count = 0;
@@ -78,7 +77,7 @@ const countOfVowels = (word) => {
 
 console.log("Завдання 5: кількість голосних літер у слові Anastasiia =", countOfVowels("Anastasiia"));
 
-//task6
+
 function power(base, exponent) {
     let result = 1;
 
