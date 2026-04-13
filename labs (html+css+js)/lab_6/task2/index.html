@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List — ЛР №6</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+    <h1>SZV<span>.</span>Tasks</h1>
+    <div id="counter">Всього: <strong id="count-total">0</strong> · Виконано: <strong id="count-done">0</strong></div>
+</header>
+
+<main>
+
+    <section class="add-section">
+        <form id="add-form" novalidate>
+            <input
+                    id="new-task-input"
+                    type="text"
+                    placeholder="Нове завдання..."
+                    required
+                    minlength="2"
+                    maxlength="120"
+                    autocomplete="off"
+            />
+            <button type="submit" id="add-btn">Додати</button>
+        </form>
+    </section>
+
+    <section class="sort-section">
+        <span class="section-label">Сортування:</span>
+        <div class="sort-group" id="sort-group"></div>
+        <button class="reset-btn" id="reset-sort-btn">↺ Скинути</button>
+    </section>
+
+    <ul id="task-list"></ul>
+
+    <p id="empty-msg" style="display:none">
+        <span></span>
+        Завдань немає. Додайте перше!
+    </p>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
