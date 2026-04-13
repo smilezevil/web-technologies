@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Магазин товарів</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<?-- ШАПКА -->
+<header>
+    <h1>SZV<span>.</span>UA</h1>
+    <div id="total-price">Загальна вартість: <strong>₴0</strong></div>
+</header>
+
+<div class="layout">
+
+    <aside>
+        <div>
+            <h2>Фільтр</h2>
+            <div class="filter-group" id="filter-group"></div>
+            <button class="reset-btn" id="reset-filter-btn">↺ Скинути фільтр</button>
+        </div>
+        <div>
+            <h2>Сортування</h2>
+            <div class="sort-group" id="sort-group"></div>
+            <button class="reset-btn" id="reset-sort-btn">↺ Скинути сортування</button>
+        </div>
+    </aside>
+
+    <main>
+        <button id="add-btn">＋ Додати новий товар</button>
+
+        <p id="empty-msg" style="display:none">
+            <span></span>
+            Наразі список товарів пустий. Додайте новий товар.
+        </p>
+
+        <ul id="product-list"></ul>
+    </main>
+</div>
+
+<div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+        <h2 class="modal-title" id="modal-title">Новий товар</h2>
+
+        <input type="hidden" id="field-id" />
+
+        <div class="form-group">
+            <label for="field-name">Назва товару *</label>
+            <input id="field-name" type="text" placeholder="Напр. iPhone 15 Pro"
+                   required minlength="2" maxlength="80" />
+        </div>
+
+        <div class="form-group">
+            <label for="field-price">Ціна (₴) *</label>
+            <input id="field-price" type="number" placeholder="0"
+                   required min="0.01" step="0.01" />
+        </div>
+
+        <div class="form-group">
+            <label for="field-category">Категорія *</label>
+            <select id="field-category" required>
+                <option value="">— оберіть категорію —</option>
+                <option value="Електроніка">Електроніка</option>
+                <option value="Одяг">Одяг</option>
+                <option value="Книги">Книги</option>
+                <option value="Спорт">Спорт</option>
+                <option value="Дім та сад">Дім та сад</option>
+                <option value="Автомобілі">Автомобілі</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="field-desc">Короткий опис</label>
+            <input id="field-desc" type="text" placeholder="Декілька слів про товар..."
+                   maxlength="160" />
+        </div>
+
+        <div class="form-group">
+            <label for="field-image">URL зображення</label>
+            <input id="field-image" type="url" placeholder="https://..." />
+        </div>
+
+        <div class="modal-actions">
+            <button class="btn-cancel" id="modal-cancel">Скасувати</button>
+            <button class="btn-primary" id="modal-save">Зберегти</button>
+        </div>
+    </div>
+</div>
+
+<div id="toast-container" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
