@@ -38,7 +38,6 @@ const toggleDone = (tasks, id) =>
 const sortTasks = (tasks, key) => {
     if (!key) return [...tasks];
     if (key === 'done') {
-        // спочатку невиконані, потім виконані
         return [...tasks].sort((a, b) => Number(a.done) - Number(b.done));
     }
     return [...tasks].sort((a, b) => a[key] - b[key]);
