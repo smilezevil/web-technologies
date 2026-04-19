@@ -17,23 +17,23 @@ Here is my labs :)
 | Lab 2 - task2 | 📝 Task 2 | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab2/task2.html) |
 | Lab 2 - task2file2 | 📝 Task 2 File 2 | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab2/task2File2.html) |
 | Lab 3 | 🔗 Tables and links | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab3/index.html) |
-| Lab 4 - task1 | 📋 HTML Forms | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab4/lab4_1.html) |
-| Lab 4 - task2 | 📋 HTML Forms | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab4/lab4_2.html) |
-| Lab 4 - task3 | 📋 HTML Forms | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab4/lab4_3.html) |
-| Lab 4 - task4 | 📋 HTML Forms | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab4/lab4_4.html) |
-| Lab 5 - task1 | 🎨 Intro to CSS styling | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab5/lab5_1.html) |
-| Lab 5 - task2 | 🎨 Intro to CSS styling | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab5/lab5_2.html) |
-| Lab 5 - task3 | 🎨 Intro to CSS styling | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab5/lab5_3.html) |
-| Lab 6 | 📦 CSS Box Model | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab6/index.html) |
-| Lab 6 - page2 | 📦 CSS Box Model | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab6/page_2.html) |
-| Lab 6 - page3 | 📦 CSS Box Model | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab6/page_3.html) |
-| Lab 6 - page4 | 📦 CSS Box Model | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab6/page_4.html) |
-| Lab 6 - page5 | 📦 CSS Box Model | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab6/page_5.html) |
-| Lab 7 - index | 🟦 Flexbox layouts | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab7/index.html) |
-| Lab 7 - index2 | 🟦 Flexbox layouts | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab7/index2.html) |
-| Lab 7 - index3 | 🟦 Flexbox layouts | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab7/index3.html) |
-| Lab 7 - index4 | 🟦 Flexbox layouts | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab7/index4.html) |
-| Lab 7 - index5 | 🟦 Flexbox layouts | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab7/index5.html) |
+| Lab 4 - task1 | 📋 HTML Forms | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab4/task1/lab4_1.html) |
+| Lab 4 - task2 | 📋 HTML Forms | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab4/task2/lab4_2.html) |
+| Lab 4 - task3 | 📋 HTML Forms | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab4/task3/lab4_3.html) |
+| Lab 4 - task4 | 📋 HTML Forms | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab4/task4/lab4_4.html) |
+| Lab 5 - task1 | 🎨 Intro to CSS styling | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab5/task1/lab5_1.html) |
+| Lab 5 - task2 | 🎨 Intro to CSS styling | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab5/task2/lab5_2.html) |
+| Lab 5 - task3 | 🎨 Intro to CSS styling | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab5/task3/lab5_3.html) |
+| Lab 6 | 📦 CSS Box Model | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab6/html_files/index.html) |
+| Lab 6 - page2 | 📦 CSS Box Model | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab6/html_files/page_2.html) |
+| Lab 6 - page3 | 📦 CSS Box Model | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab6/html_files/page_3.html) |
+| Lab 6 - page4 | 📦 CSS Box Model | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab6/html_files/page_4.html) |
+| Lab 6 - page5 | 📦 CSS Box Model | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab6/html_files/page_5.html) |
+| Lab 7 - index | 🟦 Flexbox layouts | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab7/task1/index.html) |
+| Lab 7 - index2 | 🟦 Flexbox layouts | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab7/task2/index2.html) |
+| Lab 7 - index3 | 🟦 Flexbox layouts | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab7/task3/index3.html) |
+| Lab 7 - index4 | 🟦 Flexbox layouts | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab7/task4/index4.html) |
+| Lab 7 - index5 | 🟦 Flexbox layouts | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab7/task5/index5.html) |
 | Lab 8 - task3 | 🔲 CSS Grid layouts | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab8/task3/index.html) |
 | Lab 8 - task4-5 | 🔲 CSS Grid layouts | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab8/task4-5/index.html) |
 | Lab 9 - task3 | 📱 Responsive design | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab8/task3/index.html) |
