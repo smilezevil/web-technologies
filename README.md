@@ -7,7 +7,7 @@ Here is my labs :)
 
 ## 📁 HTML + CSS
 
-| Lab | Тема | Link |
+| Lab | Topic | Link |
 |-----|------|------|
 | Lab 1 | 🏷️ Basic HTML tags | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab1/index.html) |
 | Lab 2 | 📝 Text formatting and lists | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab2/index.html) |
@@ -44,7 +44,7 @@ Here is my labs :)
 
 ## 📁 HTML + CSS + JavaScript
 
-| Lab | Тема | Link |
+| Lab | Topic | Link |
 |-----|------|------|
 | Lab 1 | 🔤 Basic syntax and variables | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss%2Bjs)/lab_1/index.html) |
 | Lab 2 - task1 | 🔁 Functions and control flow | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss%2Bjs)/lab_2/task1.js) |
