@@ -237,8 +237,8 @@ dom.btnStart.addEventListener('click',     () => { stopAllSounds(); startGame();
 dom.btnRestart.addEventListener('click',   restartGame);
 dom.btnNextLevel.addEventListener('click', nextLevel);
 dom.btnPlayAgain.addEventListener('click', startGame);
-dom.gunman.addEventListener('click', e => { e.stopPropagation(); playerShootsGunman(); });
-dom.gameScreen.addEventListener('click', () => { if (state.phase === 'waiting') handleEarlyClick(); });
+dom.gunman.addEventListener('click', e => { e.stopPropagation(); if (state.phase === 'waiting') { handleEarlyClick(); } else { playerShootsGunman(); } });
+dom.gameScreen.addEventListener('click', () => { if (state.phase === 'waiting') { handleEarlyClick(); } });
 
 const startIntroMusic = () => {
     if (state.phase === 'menu' && sounds.intro.paused) {
