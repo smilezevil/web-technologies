@@ -36,10 +36,10 @@ Here is my labs :)
 | Lab 7 - index5 | 🟦 Flexbox layouts | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab7/task5/index5.html) |
 | Lab 8 - task3 | 🔲 CSS Grid layouts | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab8/task3/index.html) |
 | Lab 8 - task4-5 | 🔲 CSS Grid layouts | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab8/task4-5/index.html) |
-| Lab 9 - task3 | 📱 Responsive design | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab8/task3/index.html) |
-| Lab 9 - task4 | 📱 Responsive design | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab8/task4/index.html) |
-| Lab 9 - task5 | 📱 Responsive design | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab8/task5/index.html) |
-| Lab 9 - task6 | 📱 Responsive design | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab8/task6/index.html) |
+| Lab 9 - task3 | 📱 Responsive design | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab9/task3/index.html) |
+| Lab 9 - task4 | 📱 Responsive design | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab9/task4/index.html) |
+| Lab 9 - task5 | 📱 Responsive design | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab9/task5/index.html) |
+| Lab 9 - task6 | 📱 Responsive design | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss)/lab9/task6/index.html) |
 
 
 ## 📁 HTML + CSS + JavaScript
