@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app">
+
+    <header class="header">
+        <h1 class="header-title">Kanban Board</h1>
+        <p class="header-sub">Перетягуйте картки між колонками</p>
+    </header>
+
+    <main class="board" id="board">
+
+        <div class="column" id="col-todo" data-col="todo">
+            <div class="column-header">
+                <span class="column-title">To Do</span>
+                <span class="column-count" id="count-todo">0</span>
+            </div>
+            <div class="column-body" id="body-todo">
+            </div>
+        </div>
+
+        <div class="column" id="col-progress" data-col="progress">
+            <div class="column-header">
+                <span class="column-title">In Progress</span>
+                <span class="column-count" id="count-progress">0</span>
+            </div>
+            <div class="column-body" id="body-progress">
+            </div>
+        </div>
+
+        <div class="column" id="col-review" data-col="review">
+            <div class="column-header">
+                <span class="column-title">Review</span>
+                <span class="column-count" id="count-review">0</span>
+            </div>
+            <div class="column-body" id="body-review">
+            </div>
+        </div>
+
+        <div class="column" id="col-done" data-col="done">
+            <div class="column-header">
+                <span class="column-title">Done</span>
+                <span class="column-count" id="count-done">0</span>
+            </div>
+            <div class="column-body" id="body-done">
+            </div>
+        </div>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
