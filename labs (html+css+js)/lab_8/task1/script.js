@@ -417,7 +417,7 @@ function handleRoundEnd(isTimeout = false) {
 }
 
 function showRoundEndModal(isTimeout) {
-    dom.modalTitle.textContent = isTimeout ? '⏰ Час вийшов!' : '🎉 Раунд завершено!';
+    dom.modalTitle.textContent = isTimeout ? 'Час вийшов!' : 'Раунд завершено!';
 
     const lastRound = state.allRoundsStats[state.allRoundsStats.length - 1];
     const roundWinner = settings.players === 2 ? calcWinner(lastRound) : null;
@@ -437,7 +437,7 @@ function showRoundEndModal(isTimeout) {
 }
 
 function showGameEndModal(isTimeout) {
-    dom.modalTitle.textContent = isTimeout ? '⏰ Час вийшов!' : '🏆 Гра завершена!';
+    dom.modalTitle.textContent = isTimeout ? 'Час вийшов!' : 'Гра завершена!';
 
     let html = '';
 
