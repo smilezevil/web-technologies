@@ -59,11 +59,15 @@ Here is my labs :)
 | Lab 6 — task 1 | 🛍️ DOM manipulation — Product List | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss%2Bjs)/lab_6/task1/index.html) |
 | Lab 6 — task 2 | ✅ DOM manipulation — To-Do List | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss%2Bjs)/lab_6/task2/index.html) |
 | Lab 7 | 🎮 Browser Events — Wild Gunman | [Грати →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss%2Bjs)/lab_7/index.html) |
+| Lab 8 — task 1 | 🃏 Memory Pair Game | [Грати →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss%2Bjs)/lab_8/task1/index.html) |
+| Lab 8 — task 2 | 🎠 Image Slider | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss%2Bjs)/lab_8/task2/index.html) |
+| Lab 8 — task 3 | 📋 Kanban Board | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss%2Bjs)/lab_8/task3/index.html) |
+| Lab 8 — task 4 | 🗂️ Lang Cards Drag & Drop | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss%2Bjs)/lab_8/task4/index.html) |
 
 ## 📊 Progress
 
 ![HTML+CSS](https://img.shields.io/badge/HTML%2BCSS-9%20labs-orange?style=flat-square)
-![JavaScript](https://img.shields.io/badge/HTML%2BCSS%2BJS-7%20labs-yellow?style=flat-square)
+![JavaScript](https://img.shields.io/badge/HTML%2BCSS%2BJS-8%20labs-yellow?style=flat-square)
 ![Status](https://img.shields.io/badge/status-in%20progress-green?style=flat-square)
 
 made with 💚 by smilezevil
