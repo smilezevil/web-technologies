@@ -385,7 +385,7 @@ const stopTimer = () => {
 
 function handleTimeOut() {
     stopTimer();
-    handleRoundEnd(true); // true = час вийшов
+    handleRoundEnd(true);
 }
 
 
@@ -425,7 +425,7 @@ function showRoundEndModal(isTimeout) {
     let html = `<p style="color:var(--text-muted)">Раунд ${state.round} з ${settings.rounds}</p>`;
 
     if (settings.players === 2 && roundWinner) {
-        html += `<div class="winner-banner">🏆 Переміг: ${roundWinner.name}</div>`;
+        html += `<div class="winner-banner">Переміг: ${roundWinner.name}</div>`;
     }
 
     html += buildStatsTable(lastRound);
@@ -445,7 +445,7 @@ function showGameEndModal(isTimeout) {
         const summary = getPlayerSummary(state.allRoundsStats, 2);
         const overallWinner = calcWinner(summary);
 
-        html += `<div class="winner-banner">🥇 Переможець: ${overallWinner.name}</div>`;
+        html += `<div class="winner-banner">Переможець: ${overallWinner.name}</div>`;
         html += `<table class="stats-table">
       <tr><th>Гравець</th><th>Загально ходів</th><th>Загальний час</th></tr>`;
         summary.forEach(p => {
@@ -470,7 +470,7 @@ function showGameEndModal(isTimeout) {
     } else {
         const lastRound = state.allRoundsStats[state.allRoundsStats.length - 1];
         const winner = calcWinner(lastRound);
-        html += `<div class="winner-banner">🏆 Переміг: ${winner.name}</div>`;
+        html += `<div class="winner-banner">Переміг: ${winner.name}</div>`;
         html += buildStatsTable(lastRound);
     }
 
