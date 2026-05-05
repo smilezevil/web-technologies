@@ -19,7 +19,6 @@ const DEFAULT_SETTINGS = {
     rounds:     1,
 };
 
-
 const shuffleArray = arr =>
         [...arr].sort(() => Math.random() - 0.5);
 
@@ -41,22 +40,6 @@ const formatTime = secs => {
     return `${m}:${s}`;
 };
 
-const calcWinner = roundStats => {
-    if (roundStats.length === 0) return null;
-    return roundStats.reduce((best, curr) =>
-            curr.moves < best.moves ||
-            (curr.moves === best.moves && curr.time < best.time)
-                    ? curr : best
-    );
-};
-
-const getPlayerSummary = (allRoundsStats, playerCount) =>
-        Array.from({ length: playerCount }, (_, i) => ({
-            name:       allRoundsStats[0]?.[i]?.name ?? `Гравець ${i+1}`,
-            totalMoves: allRoundsStats.reduce((s, r) => s + (r[i]?.moves ?? 0), 0),
-            totalTime:  allRoundsStats.reduce((s, r) => s + (r[i]?.time  ?? 0), 0),
-        }));
-
 let settings = { ...DEFAULT_SETTINGS };
 
 let state = {
@@ -73,7 +56,6 @@ let state = {
     roundStartTime: null,
     locked:         false,
 };
-
 
 const $ = id => document.getElementById(id);
 
@@ -101,7 +83,6 @@ const dom = {
     nameP2Row:           $('name-p2-row'),
     roundsDisplay:       $('rounds-display'),
 };
-
 
 document.querySelectorAll('.btn-option').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -156,7 +137,6 @@ function resetSettings() {
     $('name-p1').value = '';
     $('name-p2').value = '';
     dom.nameP2Row.style.display = 'none';
-
     dom.roundsDisplay.textContent = '1';
 }
 
@@ -216,8 +196,6 @@ function startRound() {
     startTimer();
 }
 
-
-
 function renderBoard() {
     dom.board.innerHTML = '';
     dom.board.style.gridTemplateColumns = `repeat(${settings.cols}, 1fr)`;
@@ -257,8 +235,6 @@ function renderHUD() {
             state.currentPlayer === 0 ? settings.nameP1 : settings.nameP2;
 }
 
-
-
 function handleCardClick(idx) {
     const card = state.deck[idx];
 
@@ -276,7 +252,9 @@ function handleCardClick(idx) {
     flipCardDOM(idx, true);
 
     if (state.flipped.length === 2) {
-        state = { ...state, moves: state.moves + 1 };
+        if (settings.players === 1) {
+            state = { ...state, moves: state.moves + 1 };
+        }
         checkMatch();
     }
 }
@@ -359,7 +337,6 @@ function handleMismatch(i1, i2) {
 }
 
 
-
 function startTimer() {
     clearInterval(state.timerInterval);
 
@@ -389,7 +366,6 @@ function handleTimeOut() {
 }
 
 
-
 function handleRoundEnd(isTimeout = false) {
     stopTimer();
 
@@ -397,8 +373,8 @@ function handleRoundEnd(isTimeout = false) {
 
     const roundStat = settings.players === 2
             ? [
-                { name: settings.nameP1, moves: state.scores[0], time: elapsedSecs },
-                { name: settings.nameP2, moves: state.scores[1], time: elapsedSecs },
+                { name: settings.nameP1, score: state.scores[0] },
+                { name: settings.nameP2, score: state.scores[1] },
             ]
             : [{ name: settings.nameP1, moves: state.moves, time: elapsedSecs }];
 
@@ -420,15 +396,22 @@ function showRoundEndModal(isTimeout) {
     dom.modalTitle.textContent = isTimeout ? 'Час вийшов!' : 'Раунд завершено!';
 
     const lastRound = state.allRoundsStats[state.allRoundsStats.length - 1];
-    const roundWinner = settings.players === 2 ? calcWinner(lastRound) : null;
-
     let html = `<p style="color:var(--text-muted)">Раунд ${state.round} з ${settings.rounds}</p>`;
 
-    if (settings.players === 2 && roundWinner) {
-        html += `<div class="winner-banner">Переміг: ${roundWinner.name}</div>`;
+    if (settings.players === 2) {
+        const p1 = lastRound[0];
+        const p2 = lastRound[1];
+
+        if (p1.score > p2.score) {
+            html += `<div class="winner-banner">Переміг: ${p1.name}</div>`;
+        } else if (p2.score > p1.score) {
+            html += `<div class="winner-banner">Переміг: ${p2.name}</div>`;
+        } else {
+            html += `<div class="winner-banner" style="color: var(--accent3); border-color: var(--accent3)">Нічия!</div>`;
+        }
     }
 
-    html += buildStatsTable(lastRound);
+    html += buildStatsTable(lastRound, settings.players === 2);
 
     dom.modalBody.innerHTML = html;
     dom.modalNext.textContent = 'Наступний раунд';
@@ -441,37 +424,36 @@ function showGameEndModal(isTimeout) {
 
     let html = '';
 
-    if (settings.players === 2 && settings.rounds > 1) {
-        const summary = getPlayerSummary(state.allRoundsStats, 2);
-        const overallWinner = calcWinner(summary);
+    if (settings.players === 2) {
+        const totalP1 = state.allRoundsStats.reduce((sum, r) => sum + r[0].score, 0);
+        const totalP2 = state.allRoundsStats.reduce((sum, r) => sum + r[1].score, 0);
 
-        html += `<div class="winner-banner">Переможець: ${overallWinner.name}</div>`;
+        if (totalP1 > totalP2) {
+            html += `<div class="winner-banner">Переможець гри: ${settings.nameP1}</div>`;
+        } else if (totalP2 > totalP1) {
+            html += `<div class="winner-banner">Переможець гри: ${settings.nameP2}</div>`;
+        } else {
+            html += `<div class="winner-banner" style="color: var(--accent3); border-color: var(--accent3)">Нічия!</div>`;
+        }
+
         html += `<table class="stats-table">
-      <tr><th>Гравець</th><th>Загально ходів</th><th>Загальний час</th></tr>`;
-        summary.forEach(p => {
-            const isWinner = p.name === overallWinner.name;
-            html += `<tr ${isWinner ? 'class="winner-row"' : ''}>
-        <td>${p.name}</td>
-        <td>${p.totalMoves}</td>
-        <td>${formatTime(p.totalTime)}</td>
-      </tr>`;
-        });
-        html += '</table>';
+            <tr><th>Гравець</th><th>Загальний рахунок</th></tr>
+            <tr ${totalP1 >= totalP2 ? 'class="winner-row"' : ''}><td>${settings.nameP1}</td><td>${totalP1}</td></tr>
+            <tr ${totalP2 >= totalP1 ? 'class="winner-row"' : ''}><td>${settings.nameP2}</td><td>${totalP2}</td></tr>
+        </table>`;
 
-        html += '<p style="color:var(--text-muted);margin-top:.75rem;font-size:.85rem">Деталі раундів:</p>';
-        state.allRoundsStats.forEach((round, i) => {
-            const w = calcWinner(round);
-            html += `<p style="font-size:.85rem">Раунд ${i+1}: переміг <b>${w.name}</b></p>`;
-        });
+        if (settings.rounds > 1) {
+            html += '<p style="color:var(--text-muted);margin-top:.75rem;font-size:.85rem">Деталі раундів:</p>';
+            state.allRoundsStats.forEach((round, i) => {
+                const p1 = round[0], p2 = round[1];
+                let wTxt = p1.score === p2.score ? 'Нічия' : (p1.score > p2.score ? p1.name : p2.name);
+                html += `<p style="font-size:.85rem">Раунд ${i+1}: <b>${wTxt}</b> (${p1.score} : ${p2.score})</p>`;
+            });
+        }
 
-    } else if (settings.players === 1) {
-        const lastRound = state.allRoundsStats[state.allRoundsStats.length - 1];
-        html += buildStatsTable(lastRound);
     } else {
         const lastRound = state.allRoundsStats[state.allRoundsStats.length - 1];
-        const winner = calcWinner(lastRound);
-        html += `<div class="winner-banner">Переміг: ${winner.name}</div>`;
-        html += buildStatsTable(lastRound);
+        html += buildStatsTable(lastRound, false);
     }
 
     dom.modalBody.innerHTML = html;
@@ -479,24 +461,35 @@ function showGameEndModal(isTimeout) {
     dom.modal.style.display = 'flex';
 }
 
-const buildStatsTable = roundStat => `
-  <table class="stats-table">
-    <tr><th>Гравець</th><th>Ходів</th><th>Час</th></tr>
-    ${roundStat.map(p => `
-      <tr>
-        <td>${p.name}</td>
-        <td>${p.moves}</td>
-        <td>${formatTime(p.time)}</td>
-      </tr>`).join('')}
-  </table>`;
-
+function buildStatsTable(roundStat, isTwoPlayer) {
+    if (isTwoPlayer) {
+        return `
+        <table class="stats-table">
+            <tr><th>Гравець</th><th>Знайдено пар</th></tr>
+            ${roundStat.map(p => `
+            <tr>
+                <td>${p.name}</td>
+                <td>${p.score}</td>
+            </tr>`).join('')}
+        </table>`;
+    } else {
+        return `
+        <table class="stats-table">
+            <tr><th>Гравець</th><th>Ходів</th><th>Час</th></tr>
+            ${roundStat.map(p => `
+            <tr>
+                <td>${p.name}</td>
+                <td>${p.moves}</td>
+                <td>${formatTime(p.time)}</td>
+            </tr>`).join('')}
+        </table>`;
+    }
+}
 
 
 dom.modalNext.addEventListener('click', () => {
     dom.modal.style.display = 'none';
-
     const isLastRound = state.round >= settings.rounds;
-
     if (isLastRound) {
         startGame();
     } else {
@@ -514,11 +507,7 @@ dom.modalSettings.addEventListener('click', () => {
 
 $('btn-restart').addEventListener('click', () => {
     stopTimer();
-    state = {
-        ...state,
-        allRoundsStats: [],
-        round: 1,
-    };
+    state = { ...state, allRoundsStats: [], round: 1 };
     startGame();
 });
 
