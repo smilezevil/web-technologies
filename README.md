@@ -63,11 +63,12 @@ Here is my labs :)
 | Lab 8 — task 2 | 🎠 Image Slider | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss%2Bjs)/lab_8/task2/index.html) |
 | Lab 8 — task 3 | 📋 Kanban Board | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss%2Bjs)/lab_8/task3/index.html) |
 | Lab 8 — task 4 | 🗂️ Lang Cards Drag & Drop | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss%2Bjs)/lab_8/task4/index.html) |
+| Lab 9 | 📝 Форми — реєстрація та авторизація | [Переглянути →](https://smilezevil.github.io/web-technologies/labs%20(html%2Bcss%2Bjs)/lab_9/index.html) |
 
 ## 📊 Progress
 
 ![HTML+CSS](https://img.shields.io/badge/HTML%2BCSS-9%20labs-orange?style=flat-square)
-![JavaScript](https://img.shields.io/badge/HTML%2BCSS%2BJS-8%20labs-yellow?style=flat-square)
+![JavaScript](https://img.shields.io/badge/HTML%2BCSS%2BJS-9%20labs-yellow?style=flat-square)
 ![Status](https://img.shields.io/badge/status-in%20progress-green?style=flat-square)
 
 made with 💚 by smilezevil
