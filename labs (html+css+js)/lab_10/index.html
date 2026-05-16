@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friend Finder</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="auth-screen" class="auth-screen">
+    <div class="bg-circle bg-circle--1"></div>
+    <div class="bg-circle bg-circle--2"></div>
+
+    <div class="card auth-card">
+        <div class="auth-logo">Friend<span>Finder</span></div>
+        <p class="auth-sub">Знаходь друзів по всьому світу</p>
+
+        <div class="tabs">
+            <button class="tab active" data-tab="register">Реєстрація</button>
+            <button class="tab"        data-tab="login">Вхід</button>
+            <div class="tab-indicator"></div>
+        </div>
+
+        <div class="form-panel active" id="panel-register">
+            <form id="form-register" novalidate>
+                <div class="row-2">
+                    <div class="field">
+                        <label for="reg-firstname">Ім'я *</label>
+                        <input id="reg-firstname" type="text" placeholder="Введіть ім'я" autocomplete="given-name" />
+                        <span class="error-msg" id="err-firstname"></span>
+                    </div>
+                    <div class="field">
+                        <label for="reg-lastname">Прізвище *</label>
+                        <input id="reg-lastname" type="text" placeholder="Введіть прізвище" autocomplete="family-name" />
+                        <span class="error-msg" id="err-lastname"></span>
+                    </div>
+                </div>
+
+                <div class="row-2">
+                    <div class="field">
+                        <label for="reg-username">Username *</label>
+                        <input id="reg-username" type="text" placeholder="Придумайте логін" autocomplete="username" />
+                        <span class="error-msg" id="err-reg-username"></span>
+                    </div>
+                    <div class="field">
+                        <label for="reg-email">Email *</label>
+                        <input id="reg-email" type="email" placeholder="example@email.com" autocomplete="email" />
+                        <span class="error-msg" id="err-email"></span>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="reg-password">Пароль *</label>
+                    <div class="input-wrap">
+                        <input id="reg-password" type="password" placeholder="Мінімум 6 символів" autocomplete="new-password" />
+                        <button type="button" class="eye-btn" data-target="reg-password">
+                            <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        </button>
+                    </div>
+                    <span class="error-msg" id="err-password"></span>
+                </div>
+
+                <div class="field">
+                    <label for="reg-confirm">Підтвердження паролю *</label>
+                    <div class="input-wrap">
+                        <input id="reg-confirm" type="password" placeholder="Повторіть пароль" autocomplete="new-password" />
+                        <button type="button" class="eye-btn" data-target="reg-confirm">
+                            <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        </button>
+                    </div>
+                    <span class="error-msg" id="err-confirm"></span>
+                </div>
+
+                <div class="row-2">
+                    <div class="field">
+                        <label for="reg-phone">Телефон *</label>
+                        <input id="reg-phone" type="tel" placeholder="+380XXXXXXXXX" autocomplete="tel" />
+                        <span class="error-msg" id="err-phone"></span>
+                    </div>
+                    <div class="field">
+                        <label for="reg-birth">Дата народження *</label>
+                        <input id="reg-birth" type="date" />
+                        <span class="error-msg" id="err-birth"></span>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Стать *</label>
+                    <div class="radio-group-inline">
+                        <label class="radio-label">
+                            <input type="radio" name="sex" value="male" /><span>Чоловік</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="sex" value="female" /><span>Жінка</span>
+                        </label>
+                    </div>
+                    <span class="error-msg" id="err-sex"></span>
+                </div>
+
+                <div class="row-2">
+                    <div class="field">
+                        <label for="reg-country">Країна *</label>
+                        <select id="reg-country">
+                            <option value="">— Оберіть країну —</option>
+                            <option value="ukraine">Україна</option>
+                            <option value="poland">Польща</option>
+                            <option value="germany">Німеччина</option>
+                            <option value="usa">США</option>
+                            <option value="france">Франція</option>
+                        </select>
+                        <span class="error-msg" id="err-country"></span>
+                    </div>
+                    <div class="field">
+                        <label for="reg-city">Місто *</label>
+                        <input id="reg-city" type="text" list="city-options" disabled placeholder="— Оберіть країну —" autocomplete="address-level2" />
+                        <datalist id="city-options"></datalist>
+                        <span class="error-msg" id="err-city"></span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">Зареєструватись</button>
+            </form>
+        </div>
+
+        <div class="form-panel" id="panel-login">
+            <form id="form-login" novalidate>
+                <div class="field">
+                    <label for="login-username">Username *</label>
+                    <input id="login-username" type="text" placeholder="Введіть username" autocomplete="username" />
+                    <span class="error-msg" id="err-login-username"></span>
+                </div>
+
+                <div class="field">
+                    <label for="login-password">Пароль *</label>
+                    <div class="input-wrap">
+                        <input id="login-password" type="password" placeholder="Мінімум 6 символів" autocomplete="current-password" />
+                        <button type="button" class="eye-btn" data-target="login-password">
+                            <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        </button>
+                    </div>
+                    <span class="error-msg" id="err-login-password"></span>
+                </div>
+
+                <div class="field">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="login-remember" />
+                        <span>Запам'ятати мене</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-submit">Увійти</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="app" style="display:none">
+    <header class="header">
+        <div class="header-logo">Friend<span>Finder</span></div>
+        <div class="search-wrap">
+            <span class="search-icon"></span>
+            <input type="text" id="search-input" class="search-input" placeholder="Пошук за ім'ям, email, локацією..." />
+            <button class="search-clear" id="search-clear" style="display:none">✕</button>
+        </div>
+        <div class="header-right">
+            <span class="user-badge" id="user-badge">👤</span>
+            <button class="btn-logout" id="btn-logout">↩ Вийти</button>
+        </div>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar" id="sidebar">
+            <button class="sidebar-toggle" id="sidebar-toggle">⚙ Фільтри</button>
+            <div class="sidebar-content" id="sidebar-content">
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">↕ Сортування</h3>
+                    <select id="sort-select" class="sort-select">
+                        <option value="">За замовчуванням</option>
+                        <option value="name-az">Ім'я A → Z</option>
+                        <option value="name-za">Ім'я Z → A</option>
+                        <option value="age-asc">Вік (молодші першими)</option>
+                        <option value="age-desc">Вік (старші першими)</option>
+                        <option value="reg-asc">Реєстрація (нові)</option>
+                        <option value="reg-desc">Реєстрація (старі)</option>
+                    </select>
+                </div>
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">⚙ Фільтри</h3>
+                    <div class="filter-group">
+                        <label class="filter-label">Стать</label>
+                        <div class="radio-group">
+                            <label class="radio-label"><input type="radio" name="gender" value="all" checked /><span>Всі</span></label>
+                            <label class="radio-label"><input type="radio" name="gender" value="male" /><span>♂ Чол</span></label>
+                            <label class="radio-label"><input type="radio" name="gender" value="female" /><span>♀ Жін</span></label>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Вік (від — до)</label>
+                        <div class="range-inputs">
+                            <input type="number" id="age-min" class="range-input" placeholder="від" min="0" max="120" />
+                            <span>—</span>
+                            <input type="number" id="age-max" class="range-input" placeholder="до" min="0" max="120" />
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Рік народження</label>
+                        <input type="number" id="birth-year" class="filter-input" placeholder="Напр. 1995" min="1900" max="2020" />
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Локація</label>
+                        <input type="text" id="location-filter" class="filter-input" placeholder="Напр. Paris" />
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Email</label>
+                        <input type="text" id="email-filter" class="filter-input" placeholder="Пошук по email" />
+                    </div>
+                    <button class="btn-reset-filters" id="btn-reset-filters">↺ Скинути всі фільтри</button>
+                </div>
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">❤️ Обрані <span class="fav-badge" id="fav-count">0</span></h3>
+                    <button class="btn-favs" id="btn-show-favs">Показати обраних</button>
+                    <button class="btn-favs btn-show-all" id="btn-show-all" style="display:none">Показати всіх</button>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main">
+            <div class="stats-bar">
+                <span id="results-count"></span>
+                <span id="page-info"></span>
+            </div>
+
+            <div class="error-banner" id="error-banner" style="display:none">
+                ⚠️ <span id="error-text">Помилка завантаження</span>
+                <button class="btn-retry" id="btn-retry">Спробувати знову</button>
+            </div>
+
+            <div class="cards-grid" id="loading-grid" style="display:none">
+                <div class="skeleton-card"></div><div class="skeleton-card"></div>
+                <div class="skeleton-card"></div><div class="skeleton-card"></div>
+                <div class="skeleton-card"></div><div class="skeleton-card"></div>
+            </div>
+
+            <div class="cards-grid" id="cards-grid"></div>
+
+            <div class="empty-state" id="empty-state" style="display:none">
+                <div class="empty-icon">🔍</div>
+                <p>Нічого не знайдено</p>
+                <small>Спробуйте змінити параметри пошуку</small>
+            </div>
+
+            <div id="scroll-sentinel"></div>
+
+            <nav class="pagination" id="pagination" aria-label="Пагінація"></nav>
+        </main>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
